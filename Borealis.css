@@ -70,54 +70,43 @@ body {
 }
 
 @media screen and (max-width: 550px) {
+    .nav_hamburger {
+        display: flex;
+    }
     .nav_menu {
         position: absolute;
         display: flex;
         align-items: center;
-        background-color: rgba(255, 255, 255, 0.2);
-        top: -13rem; /* Menú oculto inicialmente */
+        background-color: rgba(white);
+        top: -13rem;
         width: 100%;
         transition: all ease-in-out 0.4s;
-        z-index: -1;
     }
-
-    .nav_menu.active {
-        top: 3.2rem; /* Muestra el menú justo debajo del navbar */
-        z-index: 1;
-    }
-
     .nav {
         flex-direction: column;
         align-items: flex-start;
     }
-
     .nav_menu ul {
         flex-direction: column;
         width: 100%;
         padding: 3rem 0 0.6rem;
     }
-
     .nav_menu ul li {
         text-align: center;
     }
-
-    .nav_hamburger {
-        display: flex;
+    .nav_menu {
+        z-index: -1;
     }
-
-    .nav_hamburger_line {
-        background-color: skyblue;
+    .nav_menu:active {
+        top: 0;
     }
-
-    .nav_hamburger.active .nav_hamburger_line:nth-child(1) {
+    .nav_hamburger:active :nth-child(1) {
         transform: rotate(45deg) translate(0.45rem, 0.1875rem);
     }
-
-    .nav_hamburger.active .nav_hamburger_line:nth-child(2) {
+    .nav_hamburger:active :nth-child(2) {
         opacity: 0;
     }
-
-    .nav_hamburger.active .nav_hamburger_line:nth-child(3) {
-        transform: rotate(-45deg) translate(0.45rem, -0.1875rem);
+    .nav_hamburger:active :nth-child(3) {
+        transform: rotate(45deg) translate(0.45rem, -0.1875rem);
     }
 }
