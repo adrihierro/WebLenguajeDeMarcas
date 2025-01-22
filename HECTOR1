@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>AGENCIA SIN TIEMPO</title>
+        <link rel="stylesheet" href="TEMPO.css">
+        <meta charset="utf-8">
+        <hr>
+        
+    </head>
+    <body>
+        <section>
+            <hr>
+            <b>
+                <a href="MAIN.html">NOSOTROS</a> || 
+                <a href="Destinos.html">DESTINOS</a> || 
+                <a href="Reservas.html">RESERVAS</a>
+            </b>
+            <h1>AGENCIA SIN TIEMPO</h1>
+            <h1>"Explora lo eterno, vive lo imposible"</h1>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+        </section>
+        <div style="padding: 80px;">
+            <ul>
+                <h1>¿Quiénes somos?</h1>
+                <p>Somos una agencia de viajes especializada en ofrecer experiencias únicas en dimensiones donde el tiempo no existe. Descubre un universo donde los segundos se disuelven y la eternidad es tu compañera de viaje.</p>
+            </ul>
+            <hr>
+            <h1>¿Cómo lo hacemos?</h1>
+            <ol>
+                <p>En "Agencia Sin Tiempo" utilizamos tecnología dimensional avanzada para transportarte a un mundo donde el tiempo no existe</p>
+                <li>- Accedemos a portales multidimensionales seguros que conectan con el espacio donde el tiempo se desvanece y todo es eterno.</li><br>
+                
+                <li>- Contamos con guías especializados en experiencias atemporales para que vivas cada momento como si fuera eterno, porque aquí lo és.</li><br>
+                <img src="Captura de pantalla 2024-11-06 163904.png" width="800" height="300" alt="Guías atemporales"><br>
+                <li>- Diseñamos recorridos personalizados donde puedes explorar la historia, la naturaleza y el infinito sin ¡sin preocuparte por el reloj!</li><br>
+                <img src="Captura de pantalla 2024-11-13 022329.png" width="800" height="300" alt="Viajes a dimensiones"><br>
+                <li>- Además, nuestros portales eliminan las preocupaciones habituales del tiempo: sin plazos, sin esperas, solo experiencias puras y atemporales.</li><br>
+                <a href="kkmkmmjekf.html">CLICK AQUÍ PARA IR A LA DEMO</a>
+                <li>- A continuación veran una recreación virtual de esta dimensión:</li>
+                <object
+                    data="https://www.youtube.com/embed/example_video"
+                    type="text/html"
+                    width="560"
+                    height="315">
+                </object>
+                <a href="https://www.youtube.com/shorts/example_video"></a>
+            </ol>
+            <img src="dimensiones_sin_tiempo.png" width="1200" height="300" alt="Destinos sin tiempo">
+            <hr>
+            <table>
+                <tr>
+                    <th>EVENTO</th>
+                    <th>CARACTERÍSTICAS</th>
+                    <th>EXPERIENCIAS</th>
+                </tr>
+                <tr>
+                    <td>La Eterna Aurora</td>
+                    <td>Colores infinitos en el cielo</td>
+                    <td>Explora un amanecer eterno</td>
+                </tr>
+                <tr>
+                    <td>El Valle detonado</td>
+                    <td>Sin ciclos, solo momentos</td>
+                    <td>Descubre un valle con en una explosión atrapada en el tiempo </td>
+                </tr>
+            </table>
+            <h1>¿Qué te ofrecemos?</h1>
+            <ul>
+                <li><b>VIVE</b> momentos eternos</li>
+                <li><b>DESCUBRE</b> lo desconocido</li>
+                <li><b>EXPLORA</b> sin límites</li>
+            </ul>
+            <hr>
+            <p>
+                <a href="Destinos.html">EXPLORAR DESTINOS</a><br>
+                <a href="Seguros.html">DISFRUTA DE SEGUROS ETERNOS</a><br>
+                <a href="Reservas.html">HAZ TU RESERVA</a>
+            </p>
+        </div>
+    </body>
+    <footer>
+        CONTACTO: +34 676 46 68 33 || CORREO: viajesatemporales@gmail.com || INSTAGRAM: @viajes_sin_tiempo
+    </footer>
+</html>
