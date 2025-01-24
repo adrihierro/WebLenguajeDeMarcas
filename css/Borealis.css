@@ -5,6 +5,27 @@ html, body {
     flex-direction: column;
 }
 
+main h1,h2 {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+h1.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1.hidden-top {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+h1.hidden-bottom {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
 .aurora-container {
     position: relative;
     width: 100%;
@@ -73,6 +94,7 @@ footer {
     background-size: cover;
     background-position: center;
     z-index: -1;
+    opacity: 55%;
 }
 
 .nav {
