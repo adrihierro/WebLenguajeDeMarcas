@@ -22,6 +22,8 @@
         <script src="js/menu.js" defer></script>
         <script src="js/aurora.js"></script>
         <script src="js/h1,h2 mov.js" defer></script>
+        <script src="js/Mov Img.js"></script>
+        <script src="js/video.js" defer></script>
     </head>
 
     <body>
@@ -50,7 +52,17 @@
     </body>
     <main>
         <h1 class="animated-heading">Borealis: Donde El Tiempo Se Detiene</h1>
-        <img href="">
+
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="./img/1.webp" alt="Imagen 1">
+                <img src="./img/3.png" alt="Imagen 2">
+                <img src="./img/4.jpeg" alt="Imagen 3">
+                <img src="./img/5.webp" alt="Imagen 4">
+            </div>
+            <button class="arrow left">&#8249;</button>
+            <button class="arrow right">&#8250;</button>
+        </div>
         <br>
         <h2 class="animated-heading">Un Mundo De Maravillas Congeladas</h2>
         <p>
@@ -58,6 +70,11 @@
         </p>
         <br>
         <h2 class="animated-heading">El Espectáculo de las Luces Boreales</h2>
+        <div class="video-player">
+            <video id="videoPlayer" width="100%" controls autoplay>
+                <source src="file:///C:/Users/Denis/Documents/GitHub/WebLenguajeDeMarcas/vid/1.mp4" type="video/mp4">
+            </video>
+        </div>
         <p>
             "La verdadera joya de esta dimensión son las auroras boreales..."        
         </p>

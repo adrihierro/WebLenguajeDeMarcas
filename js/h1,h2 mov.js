@@ -1,3 +1,4 @@
+// Animacion para los encabezados
 const animatedHeadings = document.querySelectorAll('.animated-heading');
 
 function handleScroll() {
@@ -21,6 +22,6 @@ function handleScroll() {
     });
 }
 
+// Llamara las funciones
 window.addEventListener('scroll', handleScroll);
-
 handleScroll();
