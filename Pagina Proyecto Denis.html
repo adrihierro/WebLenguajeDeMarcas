@@ -25,6 +25,7 @@
         <script src="js/Mov Img.js"></script>
         <script src="js/video.js" defer></script>
         <script src="js/Banner Cookies.js"></script>
+        <link rel="stylesheet" href="css/Banner Cookies.css">
     </head>
 
     <body>
@@ -108,13 +109,29 @@
         <p>
             "Borealis no es solo un lugar, es una experiencia..."        
         </p>
-        <div id="cookie-banner" class="cookie-banner">
-            <p>
-                Utilizamos cookies para mejorar tu experiencia. 
-                <a href="politica-cookies.html" target="_blank">Más información</a>.
-            </p>
-            <button id="accept-cookies">Aceptar</button>
+        <div class="cookie-banner" id="cookieBanner">
+            <p>Este sitio utiliza cookies para mejorar la experiencia. ¿Qué deseas hacer?</p>
+            <div class="cookie-buttons">
+                <button class="accept" onclick="handleCookies('accept')">Aceptar</button>
+                <button class="reject" onclick="handleCookies('reject')">Rechazar</button>
+                <button class="customize" onclick="showCustomizeBanner()">Personalizar</button>
+            </div>
         </div>
+        
+        <div class="customize-banner" id="customizeBanner">
+            <p>Selecciona qué cookies deseas permitir:</p>
+            <div>
+                <input type="checkbox" id="analytics" checked> Analíticas<br>
+                <input type="checkbox" id="marketing"> Marketing<br>
+                <input type="checkbox" id="functional" checked> Funcionales
+            </div>
+            <div class="customize-buttons">
+                <button onclick="saveCustomization()">Guardar</button>
+                <button onclick="closeCustomizeBanner()">Cancelar</button>
+            </div>
+        </div>
+        
+        <div class="settings" onclick="showSettings()">Configuración de Cookies</div>
     </main>
     <footer>
         <p>&copy; DIM TIM. Todos los derechos reservados.</p>
