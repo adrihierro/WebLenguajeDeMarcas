@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(img/fondo_pago.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;  /* Flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh;
+    text-align: center;
+    color: white;
+}
+
+.contenedor {
+    max-width: 1000px;
+    background-color: rgba(0, 0, 0, 0.5); /* Usa 'rgba' en lugar de 'rgb' para transparencia */
+    padding: 20px;
+    border-radius: 30px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    background-color: #c0c8f6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: not-allowed;
+    opacity: 0.5;
+    transition: background-color 0.3s, opacity 0.3s; /* Agrega una transición suave */
+}
+
+button:enabled {
+    background-color: #2d6df6;
+    cursor: pointer;
+    opacity: 1;
+}
