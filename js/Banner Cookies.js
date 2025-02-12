@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+document.querySelector('.cookie-buttons button, .customize-buttons button').forEach(button => button.setAttribute('tabindex','0'));
+
 function handleCookies(choice) {
     if (choice === "accept") {
         localStorage.setItem("cookieConsent", JSON.stringify({ analytics: true, marketing: true, functional: true }));
@@ -39,5 +41,13 @@ function closeBanner() {
 }
 
 function showSettings() {
-    document.getElementById("customizeBanner").classList.add("show");
+    if (localStorage.getItem("cookieConsent")){
+        document.getElementById("customizeBanner").classList.add("show");
+    }
+    
+}
+// Quitar para el dia de la presentacion, ya que resetea la configuracion cada vez que se reinicia.
+function resetCookieConsent() {
+    localStorage.removeItem("cookieConsent");
+    location.reload();
 }

@@ -29,7 +29,8 @@ main h1,h2 {
 .carousel-images img {
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: auto;
     margin: 0 auto;
     flex-shrink: 0;
@@ -252,6 +253,12 @@ footer {
 
     .nav_menu ul li {
         text-align: center;
+        width: 100%;
+    }
+
+    .nav_menu ul li a {
+        padding: 1.5 rem;
+        font-size: 1.2 rem;
     }
 
     .nav_hamburger {

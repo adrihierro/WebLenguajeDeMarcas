@@ -12,6 +12,11 @@
     transition: left 0.5s ease-in-out;
 }
 
+.cookie-banner, .customize-banner {
+    width: 90%;
+    max-width: 400px;
+}
+
 .customize-banner {
     position: fixed;
     bottom: 20px;
@@ -26,13 +31,19 @@
     transition: right 0.5s ease-in-out;
 }
 
+.cookie-banner.show, .customize-banner.show {
+    transition: all 0.5s ease-in-out;
+}
+
 .cookie-banner.show {
     left: 50%;
+    bottom: 10px;
     transform: translateX(-50%);
 }
 
 .customize-banner.show {
     right: 50%;
+    bottom: 10px;
     transform: translateX(50%);
 }
 
@@ -41,7 +52,11 @@
 }
 
 button {
-    margin: 5px;
+    width: 100%;
+    max-width: 150px;
+    margin: 5p auto;
+    display: block;
+    font-size: 1rem;
     padding: 10px 15px;
     border: none;
     cursor: pointer;
@@ -76,4 +91,17 @@ button {
 
 .hidden {
     display: none;
+}
+
+@media screen and (max-width: 480px) {
+    .cookie-banner, .customize-banner {
+        width: 95%;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    button {
+        width: 90%;
+    }
 }
