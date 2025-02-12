@@ -1,0 +1,175 @@
+#NombrePágina {
+    text-align: center;
+    font-size: 50px;
+    padding: 75px;
+    background-color: rgb(46, 42, 51);
+    color:aliceblue
+}
+#Eslogan {
+    text-align: center;
+    background-color: rgb(236, 236, 236) ;
+    padding: 20px;
+    color:rgb(0, 0, 0)
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: inset 0 -20px 15px rgba(0, 0, 0, 5), inset 0 20px 15px rgba(0, 0, 0, 5);   
+}
+header {
+    background-image: url('/home/dam/Documents/Mipágina web/Imagenes/Imagenes interdimensionales/Header.jpeg'); 
+    background-size: cover;  /* Ajusta la imagen para cubrir toda el área */
+    background-position: center;  /* Centra la imagen */
+    background-attachment: fixed; /* La imagen permanece fija cuando se hace scroll */
+    height: 300px; /* Ajusta la altura del header */
+    color: white; /* Establece el color del texto para que se vea sobre el fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 1), inset 0 10px 20px rgba(0, 0, 0, 1);
+
+}
+body {
+    cursor: url('/home/dam/Documents/Mipágina web/Imagenes/Imagenes interdimensionales/Cursor1.png'), auto;
+    background-color: rgb(0, 0, 0);
+
+        
+}
+
+footer {
+    background-color: black;
+    color: aliceblue;
+    padding: 10px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+#MainSection {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color: black;
+    padding-bottom: 150px;
+}
+#MainSection header{
+    font-size: 50px;
+}
+#MainSection p {
+    padding-top: 50px;
+}
+#Sección1 div {
+    padding: 75px;
+}
+#Sección2 div {
+    padding: 75px;
+}
+#Sección3 div {
+    padding: 75px;
+}
+#Sección1 {
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    background-image: url('/home/dam/Documents/Mipágina web/Imagenes/Imagenes interdimensionales/Seguros.jpeg');
+    background-size: cover;  /* Ajusta la imagen para cubrir toda el área */
+    background-position: center;  /* Centra la imagen */
+}
+#Sección2 {
+    padding: 60px;
+    display: flex;
+    background-image: url('/home/dam/Documents/Mipágina web/Imagenes/Imagenes interdimensionales/Novedades.jpg'); 
+    background-size: cover;  /* Ajusta la imagen para cubrir toda el área */
+    background-position: center;  /* Centra la imagen */
+}
+#Sección3 {
+    padding: 60px;
+    display: flex;
+    background-image: url('/home/dam/Documents/Mipágina web/Imagenes/Imagenes interdimensionales/Ofertas3.png');
+    background-size: cover;  /* Ajusta la imagen para cubrir toda el área */
+    background-position: center;  /* Centra la imagen */
+}
+#Sección1,#Sección2,#Sección3 { 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu .enlaces {
+    display: inline-block;
+}
+
+.menu .enlaces a {    /*Contenedor de los enlaces*/
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1em;
+    text-align: center;
+    font-size: 1em;
+    box-shadow: inset 0 -16px 10px rgba(0, 0, 0, 1), inset 0 16px 10px rgba(0, 0, 0, 1), inset -16px 0 10px rgba(0, 0, 0, 1),
+    inset 16px 0 10px rgba(0, 0, 0, 1);
+
+
+}
+
+.menu .enlaces a:hover {    /*Transicion de los enlaces*/
+    color: #000000;
+    background-color: rgba(255, 255, 255, 1); 
+    transition: color 1s ease;
+    z-index: -1;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 4px;
+    margin: 5px 0;
+    background-color: #fff;
+}
+
+/* Estilos para pantallas móviles */
+@media (max-width: 768px) {
+    .menu .enlaces {
+        display: none; /* Oculta el menú por defecto en pantallas pequeñas */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 60px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease; /* Animación para deslizamiento */
+    }
+
+    .menu .enlaces.active {
+        transform: translateX(0); /* Muestra el menú cuando tiene la clase 'active' */
+    }
+
+    .menu-toggle {
+        display: flex; /* Muestra el ícono hamburguesa en pantallas pequeñas */
+    }
+}
+
