@@ -2,8 +2,8 @@
 <html lang="es" dir="ltr">
     <head>
         <title>Viajes InterdimensionalesDestinos</title>
-        <link rel="stylesheet" href="/home/dam/Documents/Mipágina web/CSS/viajesinterdimensionalesDestinos.css">
-        <link rel="responsive" href="/home/dam/Documents/Mipágina web/CSS/responsive.css"> <!--Responsive pendiente-->
+        <link rel="stylesheet" href="CSS/viajesinterdimensionalesDestinos.css">
+        <link rel="responsive" href="CSS/responsive.css"> <!--Responsive pendiente-->
         <meta name="authors" content=""> <!--Información pendiente-->
         <meta name="keywords" content="Interdimensional,Viaje,Tiempo,Espacio,Portal,Lowcost,Deluxe,Planeta,Alternativo,Vacaciones,">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,38 +21,80 @@
                     <span class="bar"></span>
                 </div>
                 <div class="enlaces">
-                    <a class="active" href="/home/dam/Documents/Mipágina web/ViajesInterdimensionalesWeb.html">Inicio</a>
+                    <a class="active" href="ViajesInterdimensionalesWeb.html">Inicio</a>
                     <a class="active" href=""">Destinos</a>
                     <a class="active" href="">Seguros</a>
                     <a class="active" href="">Contacto</a>
                 </div>
             </nav>
+            <div id="presentacion">En DIM TIM hemos rebasado fronteras nunca imaginadas y explorado los últimos rincones de la realidad. En esta sección le ofrecemos los tres destinos más populares en este momento.</div>
             <section id="Sección1"> 
-                <div>TOSTUM<br>
+                <div><a class="seccionDestinos" href="">TOSTUM</a><br>
                     <p>Anfitrión: Adrian<br>
-                        Universo: El Infierno<br>
+                        Universo: Universo de los asados<br>
                         Ubicación: Desconocida<br>
-                        Capacidad: Infinita(en expansión)<br>
+                        Capacidad: &infin;Infinita(en expansión)<br>
                     </p>
                 </div> 
             </section>
             <section id="Sección2">
-                <div>ACRONOLAND<br>
+                <div><a class="seccionDestinos" href="">ACRONOLAND</a><br>
                     <p>Anfitrión: Hector<br>
                         Universo: Paraiso Eterno<br>
                         Ubicación: Desconocido<br>
-                        Capacidad: Infinita(en expansión)<br>
+                        Capacidad: <span class="numero">0</span>*10<sup class="exponente">0</sup> <br>
                     </p>
                 </div>  
                 
             </section>
             <section id="Sección3"> 
-                <div>BOREALIS<br><a href=""><img src="" title="Dimensión 3"></a></div>>
+                <div><a class="seccionDestinos" href="">BOREALIS</a><br>
+                    <p>Anfitrión: Denis<br>
+                        Universo: Multiversal<br>
+                        Ubicación: En el mismo sitio en diferentes lugares<br>
+                        Capacidad: Acceso limitado a 10 personas por experiencia.
+                    </p>
+                </div> 
             </section>
         </main>
         <footer>
             &copy; Derechos Reservados 2025
         </footer>
+        <script> //Numeros random
+            // Función que genera y muestra un número aleatorio entre 20 y 99
+            function mostrarNumeroAleatorio() {
+                const numeroAleatorio = Math.floor(Math.random() * (99 - 20 + 1)) + 20; // Número entre 20 y 99
+                const exponenteAleatorio = Math.floor(Math.random() * (99 - 10 + 1)) + 10; // Exponente entre 10 y 99
+    
+                // Actualiza los elementos con la clase 'numero-exponente' para el número y el exponente
+                const numeroElementos = document.querySelectorAll('.numero');
+                const exponenteElementos = document.querySelectorAll('.exponente');
+    
+                // Actualiza todos los elementos con la clase 'numero' con el número aleatorio
+                numeroElementos.forEach(function(numero) {
+                    numero.innerText = numeroAleatorio;
+                });
+    
+                // Actualiza todos los elementos con la clase 'exponente' con el exponente aleatorio
+                exponenteElementos.forEach(function(exponente) {
+                    exponente.innerText = exponenteAleatorio;
+                });
+            }
+    
+            // Cada cuanto llama a la función mostrarNumeroAleatorio
+            setInterval(mostrarNumeroAleatorio, 200);
+        </script>
+        <script> // Menu Movil PRUEBA,SE PUEDE BORRAR
+            // Seleccionar el botón del menú y el contenedor de enlaces
+            const menuToggle = document.getElementById('menu-toggle');
+            const enlaces = document.querySelector('.enlaces');
+    
+            // Agregar un evento de clic al menú hamburguesa
+            menuToggle.addEventListener('click', () => {
+                // Alternar la clase 'show' que muestra u oculta el menú
+                enlaces.classList.toggle('show');
+            });
+        </script>
     </body>
 
 </html>

@@ -17,7 +17,7 @@
     box-shadow: inset 0 -20px 15px rgba(0, 0, 0, 5), inset 0 20px 15px rgba(0, 0, 0, 5);   
 }
 header {
-    background-image: url('/home/dam/Documents/Mipágina web/Imagenes/Imagenes interdimensionales/Header.jpeg'); 
+    background-image: url('/home/dam/Documents/Mipágina web/Imagenes/Imagenes interdimensionales/Header1.jpg'); 
     background-size: cover;  /* Ajusta la imagen para cubrir toda el área */
     background-position: center;  /* Centra la imagen */
     background-attachment: fixed; /* La imagen permanece fija cuando se hace scroll */
@@ -36,6 +36,11 @@ body {
 
         
 }
+
+button, a {    /*Cambia la manita del cursor al pasar por encima en botones y enlaces*/
+    cursor: url('/home/dam/Documents/Mipágina web/Imagenes/Imagenes interdimensionales/Cursor2.png') 16 16, pointer;
+}
+
 
 footer {
     background-color: black;
