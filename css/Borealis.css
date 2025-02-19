@@ -112,6 +112,7 @@ video {
     filter: blur(20px);
     opacity: 0.7;
     animation: auroraMove 5s infinite alternate ease-in-out;
+    z-index: -3;
 }
 
 .aurora.left {
