@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguros Dimensionales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Seguros Dimensionales</h1>
+    </header>
+
+    <main>
+        <!-- Planes principales -->
+        <section class="planes">
+            <label class="plan" for="plan-simple">
+                <h2>Plan Simple</h2>
+                <p>Protección básica para viajes dimensionales ocasionales.</p>
+                <p class="precio">$199.99</p>
+                
+                <input type="radio" name="plan" id="plan-simple" value="simple">
+            </label>
+        <!--Plan recomendado secion de arriba mas plan normal-->
+            <label class="plan recomendado" for="plan-normal">
+                <span class="insignia">Recomendado</span>
+                <h2>Plan Normal</h2>
+                <p>Cobertura estándar para viajeros dimensionales frecuentes.</p>
+                <p class="precio">$399.99</p>
+                
+                <input type="radio" name="plan" id="plan-normal" value="normal">
+            </label>
+            <!--Plan premium-->
+            <label class="plan" for="plan-premium">
+                <h2>Plan Premium</h2>
+                <p>Máxima protección para exploradores dimensionales expertos.</p>
+                <p class="precio">$799.99</p>
+                
+                <input type="radio" name="plan" id="plan-premium" value="premium">
+            </label>
+        </section>
+
+        <!-- Resumen de selección -->
+        <section class="resumen">
+            <h2>Resumen de tu Selección</h2>
+            <!-- Alerta para selección pendiente -->
+            <div class="alerta">
+                <span class="icono">⚠️</span>
+                <p>Por favor, selecciona un plan principal</p>
+            </div>
+
+            <div class="resumen-precio">
+                <h3>Plan Principal:</h3>
+                <p>No seleccionado</p>
+                <p>$0.00</p>
+            </div>
+
+            <div class="total">
+                <p>Total: <span>$0.00</span></p>
+            </div>
+            <button disabled>Contratar Seguro</button>
+        </section>
+    </main>
+</body>
+</html>

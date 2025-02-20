@@ -1,0 +1,207 @@
+/* Estilos generales */
+body {
+    font-family: Arial; /* Estilo letra */
+    
+    background-color: #000000; /* Color del fondo */
+    
+    color: #000000; /* Color de las letras */
+    
+    text-align: center; /* Alineación todos los textos al centro */
+}
+
+/* Titulo h1 */
+h1 {
+    margin: 20px 0; /* Margen de arriba y margen de los lados */
+
+    font-size: 2rem; /* Tamaño de las letras */
+
+    color: #ffffff; /* Color de las letras */
+}
+
+/* Contenedor de planes */
+.planes {
+    display: flex; /* Flex sirve para que el contenido este en el centro */
+    
+    justify-content: center; /* Alineas el contenido de todo el contenedor */
+    
+    gap: 40px; /* Espacio entre los contenedores de lso planes */
+    
+    margin: 20px auto; /* Margen de arriba y de los lados */
+    
+    padding: 20px; /* Le da espacio un espacio entre el contenido y el borde del plan */
+    
+    max-width: 1200px; /* Ancho máximo que puede llegar a tener cada contenedo */
+}
+
+/* Estilo de cada plan */
+.plan {
+    background: #ffffff; /* Color de fondo de plan*/
+    
+    border-radius: 10px; /* Redondea las esquinas de los bordes del */
+    
+    padding: 20px; /* Espacio entre el contenido y las paredes del plan*/
+    
+    width: 300px;  /* Ancho del plan maximo*/
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de la transición */
+    
+    position: relative; /* Posición relativa Sirve para mantener en el centro el cartelito azul*/
+    
+    cursor: pointer; /* Cambia el raton al pasar por encima */
+}
+
+/* Efecto al pasar el raton PLAN */
+.plan:hover {
+    transform: translateY(-20px); /* Al pasar el cursor sube el plan  */
+    
+    box-shadow: 0 0px 60px rgba(255, 255, 255, 0.765); /* Sombra del plan (no quiero desplazamiento), (no quiero que se mueva), (60px de difuminado)*/
+}
+
+/* Precio planes y color */
+.plan .precio, h2{
+    color:#2d6df6; /* Color del precio */
+    
+    font-size: 1.5rem; /* Tamaño de los precios plan */
+    
+    font-weight: bold; /* Letra en negrita*/ 
+}
+
+/* Cartelito Recomendado*/
+.cartelito {
+    background-color: #2d6df6; /* Color de fondo del cartelito */
+    
+    color: white; /* Color de las letras */
+    
+    padding: 5px 20px; /* Espacio entre el contenido y las paredes del cartelito */
+    
+    border-radius: 20px; /* Redondea las esquinas del cartelito */
+    
+    position: absolute; /* Posición absoluta */
+    
+    top: -10px; /* Posición de arriba */
+    
+    left: 50%; /* Posición lateral a la mitad */
+    
+    transform: translateX(-50%); /* Centra el cartelito siempre al centro aunque cambie el tamaño de la pantalla */
+    
+    font-size: 0.9rem; /* Tamaño de las letras */
+    
+    font-weight: bold; /* Letra en negrita */
+}
+
+/* Sección de resumen */
+.resumen {
+    background: #ffffff; /* Color del fondo */
+    
+    border-radius: 20px; /* Redondea las esquinas del borde */
+    
+    padding: 20px; /* Espacio entre el contenido y las paredes del resumen */
+    
+    margin: 20px auto; /* Margen de arriba y de los lados */
+    
+    max-width: 800px; /* Ancho máximo que puede llegar a tener el resumen */
+    
+    text-align: left; 
+}
+
+/* Colores y estilo (h2)resumen */
+.resumen h2 {
+    background-color: #2d6df6; /* Color de fondo del titulo */
+    
+    color: white; /* Color de las letras */
+    
+    padding: 10px; /* Espacio entre el contenido y las paredes del titulo */
+    
+    margin: 0; /* Margen de arriba */
+    
+    border-radius: 20px 20px 0px 0px; /* Redondea las esquinas superiores  */
+}
+
+/* Resumen plan */
+.resumen-precio {
+    padding: 10px; /* Espacio entre el contenido y las paredes del resumen */
+    
+    background: #dbe8ff;  /* Color de fondo del resumen */
+    
+    border-radius: 0px 0px 20px 20px ; /* Redondea las esquinas inferiores  */
+}
+
+/* Alerta mensaje*/
+.alerta {
+    background-color: #ffc4c4; /* Color de fondo de la alerta */
+    
+    border: 2px solid #fa5656cb; /* Borde de la alerta */
+    
+    color: #000000; /* Color de las letras */
+    
+    padding: 10px; /* Espacio entre el contenido y las paredes de la alerta */
+    
+    margin: 10px 0; /* Margen de arriba y de abajo */
+    
+    border-radius: 10px; /* Redondea las esquinas de la alerta */
+    
+    display: flex; /* Flex sirve para que el contenido este en el centro */
+    
+    align-items: center; /* Alinea el contenido al centro de la linea*/
+    
+    gap: 20px; /* Espacio entre los elementos de la alerta */
+    
+    font-weight: bold; /* Letra en negrita */
+}
+
+/* Icono de la alerta */
+.icono {
+    font-size: 1.5rem; /* Tamaño del icono */
+}
+
+/* Total */
+.total {
+    font-size: 2rem; /* Tamaño de las letras */
+    
+    font-weight: bold; /* Letra en negrita */
+    
+    text-align: right; /* Alineación a la derecha */
+    
+    margin-top: 10px; /* Margen de arriba */
+}
+
+/* Boton */
+
+/* Botón off  */
+.contratar_seguro {
+    display: block; /* Bloquea el botón si no seseleciona un plan*/
+    
+    margin: 20px auto; /* Margen de arriba y los lados es automatico al centro*/
+    
+    background-color: #c0c8f6; /* Color de fondo del botón off*/
+    
+    color: white; /* Color de las letras */
+    
+    border: none; /* QUITAR BORDE */
+    
+    padding: 20px 25px; /* Tamaño del boton */
+    
+    border-radius: 10px; /* Redondea las esquinas del botón */
+    
+    font-size: 1rem; /* Tamaño de las letras */
+    
+    font-weight: bold; /* Letra en negrita */
+    
+    cursor: not-allowed; /* Cambia el raton al pasar por encima  aa bloqueado*/
+    
+    opacity: 3; /* Opacidad del botón */
+    
+    transition: background-color 1.s, opacity 0.5s; /* Efecto de la transición */
+}
+/* Botón on */
+.contratar_seguro:enabled {
+    background-color: #2d6df6; /* Color de fondo del botón on */
+    
+    cursor: pointer; /* Cambia el raton al pasar por encima */
+    
+    opacity: 1; /* Opacidad del botón */
+}
+/* Boton on Efecto al pasar el raton por el boton */
+.contratar_seguro:enabled:hover {
+    background-color: #00277a; /* Color de fondo del botón on al pasar el cursor*/
+}
