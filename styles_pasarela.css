@@ -1,41 +1,59 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-image: url(img/fondo_pago.jpg);
-    background-size: cover;
-    background-position: center;
-    display: flex;  /* Flexbox para centrar el contenido */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    height: 100vh;
-    text-align: center;
-    color: white;
+    background-image: url(img/fondo_pago.jpg); /* Agrega la imagen que le digamos */
+    
+    background-size: cover; /* Cubre siempre el fondo y no pierde el formato */
+    
+    background-position: center; /* Centra el centro de la imagen */
+
+    display: flex; /* Flex sirve para que el contenido este en el centro */
+    
+    justify-content: center; /* Alinea el contenido horizontalmente el contenido */
+    
+    align-items: center; /* Alinea el contenido verticalmente dentro del mismo contenedor */
+    
+    height: 100vh; /* Sirve para cubrir la altura vertical de la imagen */
+    
+    text-align: center; /* Centra el texto al medio */
+    
+    color: white; /* Color de las letras  */
 }
 
 .contenedor {
-    max-width: 1000px;
-    background-color: rgba(0, 0, 0, 0.5); /* Usa 'rgba' en lugar de 'rgb' para transparencia */
-    padding: 20px;
-    border-radius: 30px;
+    
+    max-width: 1000px; /* Ancho máximo que tendra el contenedor */
+    
+    background-color: rgba(0, 0, 0, 0.5); /*Usa 'rgba' en lugar de 'rgb' para transparencia */
+    
+    padding: 20px; /* Añade espacios internos dentro del contenedor */
+    
+    border-radius: 30px; /* Sirve para redondear los bordes */
 }
 
-button {
-    display: block;
-    margin: 20px auto;
-    background-color: #c0c8f6;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: not-allowed;
-    opacity: 0.5;
-    transition: background-color 0.3s, opacity 0.3s; /* Agrega una transición suave */
+/* Botón off  */
+.botones {    
+    margin: 20px 100px; /* Margen de arriba y los lados es automatico al centro*/
+    
+    background-color: #2d6df6; /* Color de fondo del botón off*/
+    
+    color: white; /* Color de las letras */
+    
+    border: none; /* QUITAR BORDE */
+    
+    padding: 20px 25px; /* Tamaño del boton */
+    
+    border-radius: 10px; /* Redondea las esquinas del botón */
+    
+    font-size: 1rem; /* Tamaño de las letras */
+    
+    font-weight: bold; /* Letra en negrita */
+    
+    cursor: pointer; /* Cambia el raton al pasar por encima  aa bloqueado*/
+    
+    opacity: 3; /* Opacidad del botón */
+    
+    transition: background-color 1.s, opacity 0.5s; /* Efecto de la transición */
 }
-
-button:enabled {
-    background-color: #2d6df6;
-    cursor: pointer;
-    opacity: 1;
+/* Boton on Efecto al pasar el raton por el boton */
+.botones:hover {
+    background-color: #00277a; /* Color de fondo del botón on al pasar el cursor*/
 }
