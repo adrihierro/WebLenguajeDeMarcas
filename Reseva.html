@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva de mesa</title>
+  <link rel="stylesheet" href="css/calendario.css">
+</head>
+<body>
+  <div class="container">
+      <div class="title">Reserva de mesa</div>
+      <form id="form-validation" novalidate>
+          <div class="form-group">
+            <span>Nombre</span>
+            <input type="text" placeholder="Ingrese Nombre" required name="nombre">
+            <small>Ingresa el nombre</small>
+          </div>
+          <div class="form-group">
+            <span>Apellido</span>
+            <input type="text" placeholder="Ingrese Apellido" required name="apellido">
+            <small>Ingresa el apellido</small>
+          </div>
+          <div class="form-group">
+            <span>Email</span>
+            <input type="email" placeholder="Ingrese email" required name="email">
+            <small>Ingresa el email</small>
+          </div>
+          <div class="form-group">
+            <span>Telefono</span>
+            <input type="text" placeholder="Ingrese el telefono" required name="telf">
+            <small>Ingresa el telefono</small>
+          </div>
+          <div class="form-group">
+            <span>Dia de la reserva</span>
+            <input type="datetime-local" required name="datetime">
+            <small>Ingresa la fecha de Reserva</small>
+          </div>
+          <div class="button">
+            <input type="submit" value="Reservar" required>
+          </div>
+      </form>
+  </div>
+
+  <!-- Contenedor oculto para mostrar los detalles de la reserva -->
+  <div id="reservation-details" style="display:none;">
+    <h2>Datos de la reserva:</h2>
+    <p><strong>Nombre:</strong> <span id="display-name"></span></p>
+    <p><strong>Apellido:</strong> <span id="display-lastname"></span></p>
+    <p><strong>Email:</strong> <span id="display-email"></span></p>
+    <p><strong>Teléfono:</strong> <span id="display-phone"></span></p>
+    <p><strong>Fecha de reserva:</strong> <span id="display-date"></span></p>
+    <img id="qr" src="/img/Commons_QR_code.png" alt="">
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
