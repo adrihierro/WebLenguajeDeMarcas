@@ -1,0 +1,105 @@
+
+#toolbar{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    border-color: beige;
+    border: 10px solid grey;
+    background-color:rgb(0, 5, 3);
+    z-index:1000;
+    padding:0px;
+    text-align: right;
+
+}
+
+
+#derecha{
+    font-size: 45px;
+    text-align:right
+}
+
+#invisible{
+    color: white;
+}
+
+#IMPROVISACION{
+    text-align: left;
+    font-size:30px;
+    color:white;
+    text-shadow: 1px  0px 0px black,
+                 0px  1px 0px red,
+                -1px  0px 0px yellow,
+                 0px -1px 0px orange;
+}
+
+#centrada {
+    font-family:'Times New Roman', Times, serif;
+    font-size:20px;
+    margin: auto;
+    border-collapse: collapse;
+    width: 50%;
+    text-align: center;
+}
+
+#tborde{
+    font-family:Papyrus;
+    font-size:50px;
+    color:white;
+    text-shadow: 1px  0px 0px black,
+                 0px  1px 0px black,
+                -1px  0px 0px black,
+                 0px -1px 0px black;
+  }
+
+
+#tfont{
+    font-family:'Times New Roman', Times, serif;
+    font-size:28px;
+    color:black;
+    text-shadow: 1px  0px 0px black,
+                 0px  1px 0px red,
+                -1px  0px 0px yellow,
+                 0px -1px 0px black;
+  }
+p{
+    font-family:'Times New Roman', Times, serif;
+    font-size:28px;
+    
+}
+li{
+    font-family:'Times New Roman', Times, serif;
+     font-size:25px;
+}
+footer{
+    
+    font-family:'Times New Roman', Times, serif;
+    font-size:20px;
+}
+ul{
+    
+    font-family:'Times New Roman', Times, serif;
+    padding: 80px;
+    font-size:22px;
+    font-family: 'Times New Roman', Times, serif;
+}
+div{
+    font-family:'Times New Roman', Times, serif;
+    background-color:rgb(444, 444,444)
+}
+b{
+    font-family:'Times New Roman', Times, serif;
+    font-size:24px;
+}
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:60px;
+    text-align: center;
+}
+section{
+    border-color: beige;
+    border: 10px solid grey;
+    background-color:rgb(0, 5, 3)
+}
+
+
