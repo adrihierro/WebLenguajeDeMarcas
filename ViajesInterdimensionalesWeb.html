@@ -3,8 +3,8 @@
 
 <head>
     <title>Viajes Interdimensionales</title>
-    <link rel="stylesheet" href="/home/dam/Documents/Mipágina web/CSS/viajesinterdimensionales.css">
-    <link rel="responsive" href="CSS/responsive.css"> <!--Responsive pendiente-->
+    <link rel="stylesheet" href="CSS/viajesinterdimensionales.css">
+    <link rel="responsive" href="Responsive/responsive.css"> <!--Responsive pendiente-->
     <meta name="authors" content=""> <!--Información pendiente-->
     <meta name="keywords"
         content="Interdimensional,Viaje,Tiempo,Espacio,Portal,Lowcost,Deluxe,Planeta,Alternativo,Vacaciones,">
@@ -27,7 +27,6 @@
                 <a class="active" href="">Inicio</a>
                 <a class="active" href="PáginaDestinos.html">Destinos</a>
                 <a class="active" href="">Seguros</a>
-                <a class="active" href="">Contacto</a>
             </div>
         </nav>
         <section id="MainSection">
@@ -70,14 +69,25 @@
                 <header class="Titulillo">Información</header>
                 <p>Financiación</p>
                 <p>Condiciones</p>
-                <p>Políticas</p>
+                <a href="">Políticas</a>
                 <p>Centro de ayuda</p>
             </div>
         </section>
     </main>
     <footer>
-        &copy; Derechos Reservados 2025
+        <div class="footerdiv"><img src="Imagenes/Insta.PNG" width="50"></div>
+        <div class="footerdiv"><img src="Imagenes/face.PNG" width="50"></div>
+        <div class="footerdiv"><img src="Imagenes/Whats.PNG" width="50"></div>
+        <div class="footerdiv"><img src="Imagenes/Twitter.PNG" width="50"></div>
+        <div class="copydiv">&copy; Todos los derechos reservados 2025</div>
     </footer>
+    <script>
+        // Script para el menú hamburguesa en dispositivos móviles
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            var enlaces = document.querySelector(".enlaces");
+            enlaces.classList.toggle("active"); // Agregar o quitar la clase 'active'
+        });
+    </script>
 </body>
 
 </html>

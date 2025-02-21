@@ -1,0 +1,109 @@
+/* Estilos predeterminados para dispositivos de escritorio */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos de la navegación en móviles */
+@media (max-width: 768px) {
+  /* Ajustamos el layout en pantallas pequeñas */
+  header#NombrePágina {
+      font-size: 24px; /* Ajustar tamaño de texto para el encabezado */
+      text-align: center;
+      padding: 10px;
+  }
+
+  #Eslogan {
+      font-size: 16px;
+      text-align: center;
+      padding: 10px;
+  }
+
+  nav .menu {
+      display: block;
+      text-align: center;
+  }
+
+  .menu-toggle {
+      display: block; /* Mostrar el botón de menú en móviles */
+      cursor: pointer;
+      padding: 10px;
+      background-color: #333;
+  }
+
+  .menu-toggle .bar {
+      background-color: white;
+      display: block;
+      width: 25px;
+      height: 4px;
+      margin: 4px auto;
+  }
+
+  .enlaces {
+      display: none; /* Ocultar los enlaces del menú en móvil */
+      text-align: center;
+  }
+
+  .enlaces a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: aliceblue;
+  }
+
+  .menu-toggle.active + .enlaces {
+      display: block; /* Mostrar enlaces cuando el menú esté activo */
+  }
+
+  /* Principal */
+  section#MainSection {
+      padding: 15px;
+  }
+
+  section#SecondSection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .Apartado {
+      margin-bottom: 30px;
+      text-align: center;
+  }
+
+  .footerdiv {
+      display: inline-block;
+      margin: 10px;
+  }
+
+  /* FOoter */
+  footer {
+      text-align: center;
+      padding: 20px;
+  }
+
+  footer .footerdiv {
+      margin: 10px;
+  }
+
+  footer .copydiv {
+      margin-top: 20px;
+      font-size: 14px;
+  }
+}
+
+/* Media Query para dispositivos más pequeños, como móviles de 320px */
+@media (max-width: 480px) {
+  header#NombrePágina {
+      font-size: 18px;
+  }
+
+  #Eslogan {
+      font-size: 14px;
+  }
+
+  footer .footerdiv img {
+      width: 40px; /* Hacer las imágenes del footer más pequeñas en pantallas pequeñas */
+  }
+}

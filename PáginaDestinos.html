@@ -3,7 +3,7 @@
     <head>
         <title>Viajes InterdimensionalesDestinos</title>
         <link rel="stylesheet" href="CSS/viajesinterdimensionalesDestinos.css">
-        <link rel="responsive" href="CSS/responsive.css"> <!--Responsive pendiente-->
+        <link rel="responsive" href="Responsive/responsive.css"> <!--Responsive pendiente-->
         <meta name="authors" content=""> <!--Información pendiente-->
         <meta name="keywords" content="Interdimensional,Viaje,Tiempo,Espacio,Portal,Lowcost,Deluxe,Planeta,Alternativo,Vacaciones,">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,14 +24,13 @@
                     <a class="active" href="ViajesInterdimensionalesWeb.html">Inicio</a>
                     <a class="active" href=""">Destinos</a>
                     <a class="active" href="">Seguros</a>
-                    <a class="active" href="">Contacto</a>
                 </div>
             </nav>
             <div id="presentacion">En DIM TIM hemos rebasado fronteras nunca imaginadas y explorado los últimos rincones de la realidad. En esta sección le ofrecemos los tres destinos más populares en este momento.</div>
             <section id="Sección1"> 
                 <div><a class="seccionDestinos" href="">TOSTUM</a><br>
                     <p>Anfitrión: Adrian<br>
-                        Universo: Universo de los asados<br>
+                        Universo: El Infierno<br>
                         Ubicación: Desconocida<br>
                         Capacidad: &infin;Infinita(en expansión)<br>
                     </p>
@@ -58,10 +57,14 @@
             </section>
         </main>
         <footer>
-            &copy; Derechos Reservados 2025
+            <div class="footerdiv"><img src="Imagenes/Insta.PNG" width="50"></div>
+            <div class="footerdiv"><img src="Imagenes/face.PNG" width="50"></div>
+            <div class="footerdiv"><img src="Imagenes/Whats.PNG" width="50"></div>
+            <div class="footerdiv"><img src="Imagenes/Twitter.PNG" width="50"></div>
+            <div class="copydiv">&copy; Todos los derechos reservados 2025</div>
         </footer>
         <script> //Numeros random
-            // Función que genera y muestra un número aleatorio entre 20 y 99
+            // número aleatorio entre 20 y 99
             function mostrarNumeroAleatorio() {
                 const numeroAleatorio = Math.floor(Math.random() * (99 - 20 + 1)) + 20; // Número entre 20 y 99
                 const exponenteAleatorio = Math.floor(Math.random() * (99 - 10 + 1)) + 10; // Exponente entre 10 y 99
@@ -84,15 +87,11 @@
             // Cada cuanto llama a la función mostrarNumeroAleatorio
             setInterval(mostrarNumeroAleatorio, 200);
         </script>
-        <script> // Menu Movil PRUEBA,SE PUEDE BORRAR
-            // Seleccionar el botón del menú y el contenedor de enlaces
-            const menuToggle = document.getElementById('menu-toggle');
-            const enlaces = document.querySelector('.enlaces');
-    
-            // Agregar un evento de clic al menú hamburguesa
-            menuToggle.addEventListener('click', () => {
-                // Alternar la clase 'show' que muestra u oculta el menú
-                enlaces.classList.toggle('show');
+        <script>
+            // Script para el menú hamburguesa en dispositivos móviles
+            document.getElementById("menu-toggle").addEventListener("click", function() {
+                var enlaces = document.querySelector(".enlaces");
+                enlaces.classList.toggle("active"); // Agregar o quitar la clase 'active'
             });
         </script>
     </body>
