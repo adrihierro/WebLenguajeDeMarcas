@@ -1,0 +1,109 @@
+draw_sprite(battleBackground,0,x,y);
+
+var _unitWithCurrentTurn = unitTurnOrder[turn].id;
+for (var i = 0; i < array_length(unitRenderOrder); i++)
+{
+	with (unitRenderOrder[i])
+	{
+		draw_self();
+	}
+}
+
+draw_sprite_stretched(sBox,0,x+475,y+520,900,240);
+draw_sprite_stretched(sBox,0,x+300,y+520,300,240);
+
+#macro COLUMN_ENEMY 360
+#macro COLUMN_NAME 520
+#macro COLUMN_HP 700
+#macro COLUMN_MP 800
+
+//draw_set_font(fnM3x6);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_color(c_gray);
+draw_text(x+COLUMN_ENEMY,y+560,"ENEMY");
+draw_text(x+COLUMN_NAME,y+560,"NAME");
+draw_text(x+COLUMN_HP,y+560,"HP");
+draw_text(x+COLUMN_MP,y+560,"MP");
+
+
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_color(c_white);
+var _drawLimit = 3;
+var _drawn = 0;
+for (var i = 0; (i < array_length(enemyUnits)) && (_drawn < _drawLimit); i++)
+{
+	var _char = enemyUnits[i];
+	if (_char.hp > 0)
+	{
+		_drawn++;
+		draw_set_halign(fa_left);
+		draw_set_color(c_white);
+		if (_char.id == _unitWithCurrentTurn) draw_set_color(c_yellow);
+		draw_text(x+COLUMN_ENEMY,y+630+(i*12),_char.name);
+	}
+}
+
+for (var i = 0; i < array_length(partyUnits); i++)
+{
+	draw_set_halign(fa_left);
+	draw_set_color(c_white);
+	var _char = partyUnits[i];
+	if (_char.id == _unitWithCurrentTurn) draw_set_color(c_yellow);
+	if (_char.hp <= 0) draw_set_color(c_red);
+	draw_text(x+COLUMN_NAME,y+630+(i*12),_char.name);
+	draw_set_halign(fa_right);
+	
+	draw_set_color(c_white);
+	if (_char.hp < (_char.hpMax * 0.5)) draw_set_color(c_orange);
+	if (_char.hp <= 0) draw_set_color(c_red);
+	draw_text(x+COLUMN_HP,y+630+(i*12),string(_char.hp) + "/" + string(_char.hpMax));
+	
+	draw_set_color(c_white);
+	if (_char.mp < (_char.mpMax * 0.5)) draw_set_color(c_orange);
+	if (_char.hp <= 0) draw_set_color(c_red);
+	draw_text(x+COLUMN_MP,y+630+(i*12),string(_char.mp) + "/" + string(_char.mpMax));
+	
+	draw_set_color(c_white);
+}
+	
+if (cursor.active)
+{
+	with (cursor)
+	{
+		if (activeTarget != noone)
+		{
+			if (!is_array(activeTarget))
+			{
+				draw_sprite(sPointer,0,activeTarget.x,activeTarget.y);
+			}
+			else
+			{
+				draw_set_alpha(sin(get_timer()/50000)+1);
+				for (var i = 0; i < array_length(activeTarget); i++)
+				{
+					draw_sprite(sPointer,0,activeTarget[i].x,activeTarget[i].y);
+				}
+				draw_set_alpha(1.0);
+			}
+		}
+	}
+}
+	
+if (battleText != "")
+{
+	var _w = string_width(battleText)+200;
+	draw_sprite_stretched(sBox,0,x+860-(_w*0.5),y+100,_w,25);
+	draw_set_halign(fa_center);
+	draw_set_color(c_white);
+	draw_text(x+860,y+100,battleText);
+}
+	
+	
+
+
+
+
+
+
