@@ -1,0 +1,185 @@
+global.actionLibrary =
+{
+	attack :
+	{
+		name : "Attack",
+		description : "{0} attacks!",
+		subMenu : -1,
+		targetRequired : true,
+		targetEnemyByDefault : true,
+		targetAll :	MODE.NEVER,
+		userAnimation : "attack",
+		effectSprite : sAttackBonk,
+		effectOnTarget : MODE.ALWAYS,
+		func : function(_user, _targets)
+		{
+			var _damage = ceil(_user.strength + random_range(-_user.strength * 0.25, _user.strength*0.25));
+			BattleChangeHP(_targets[0], -_damage, 0);
+		}
+	},
+	ice :
+	{
+		name : "Ice",
+		description : "{0} casts Ice!",
+		subMenu : "Magic",
+		mpCost : 4,
+		targetRequired: true,
+		targetEnemyByDefault: true,
+		targetAll: MODE.VARIES,
+		userAnimation :"Divi", 
+		//"cast",
+		effectSprite: Divi,
+		//sAttackIce,
+		effectOnTarget: MODE.ALWAYS,
+		func : function(_user, _targets)
+		{
+			for (var i = 0; i < array_length(_targets); i++)
+			{
+				var _damage = irandom_range(15,20);
+				if (array_length(_targets) > 1) _damage = ceil(_damage*0.75);
+				BattleChangeHP (_targets[i], -_damage);
+			}
+			//BattleChangeMP(_user, -mpCost)
+			//var _damage = irandom_range(10,15);
+			//BattleChangeHP(_targets[0], -_damage);
+			//BattleChangeMP(_user, -mpCost)
+		}
+		
+	}
+	,
+	fire :
+	{
+		name : "Fire",
+		description : "{0} casts Fire!",
+		subMenu : "Magic",
+		mpCost : 4,
+		targetRequired: true,
+		targetEnemyByDefault: true,
+		targetAll: MODE.VARIES,
+		userAnimation :"Divi", 
+		//"cast",
+		effectSprite: Divi,
+		//sAttackIce,
+		effectOnTarget: MODE.ALWAYS,
+		func : function(_user, _targets)
+		{
+			for (var i = 0; i < array_length(_targets); i++)
+			{
+				var _damage = irandom_range(25,40);
+				if (array_length(_targets) > 1) _damage = ceil(_damage*0.75);
+				BattleChangeHP (_targets[i], -_damage);
+			}
+			//BattleChangeMP(_user, -mpCost)
+			//var _damage = irandom_range(10,15);
+			//BattleChangeHP(_targets[0], -_damage);
+			//BattleChangeMP(_user, -mpCost)
+		}
+	}
+}
+
+
+enum MODE 
+{
+	NEVER =0,
+	ALWAYS = 1,
+	VARIES = 2,
+}
+		
+		
+		
+		
+		
+		
+		
+		
+global.party =
+[
+	{
+		name:"Divi",
+		hp:89,
+		hpMax:89,
+		mp:10,
+		mpMax:15,
+		strength:8,
+		sprites:{ idle: astronaut, attack: astronaut, defend: astronaut, down: astronaut, },
+		actions:[global.actionLibrary.attack, global.actionLibrary.ice, global.actionLibrary.fire]
+	}
+	,
+	{
+		name:"PELUSO",
+		hp:30,
+		hpMax:30,
+		mp:0,
+		mpMax:0,
+		strength:5,
+		sprites:{ idle: PELUSO, attack: PELUSO, defend: PELUSO, down: PELUSO},
+		actions:[global.actionLibrary.attack],
+		xpValue:15,
+		AIscript:function()
+		{
+			var _action = actions[0];
+			var _possibleTargets = array_filter(oBattle.partyUnits,function(_unit, _index)
+			{
+				return (_unit.hp >0);
+			});
+			var _target = _possibleTargets[irandom(array_length(_possibleTargets)-1)];
+			return [_action, _target];
+			//enemy turn ai goes here//enemy turn ai goes here
+		}
+	}
+	
+]
+
+
+global.enemies =
+{
+	shadowG:
+	{
+		name:"Shadow",
+		hp:30,
+		hpMax:30,
+		mp:0,
+		mpMax:0,
+		strength:5,
+		sprites:{ idle: Shadow, attack: Shadow, defend: Shadow, down: Shadow},
+		actions:[global.actionLibrary.attack],
+		xpValue:15,
+		AIscript:function()
+		{
+			var _action = actions[0];
+			var _possibleTargets = array_filter(oBattle.partyUnits,function(_unit, _index)
+			{
+				return (_unit.hp >0);
+			});
+			var _target = _possibleTargets[irandom(array_length(_possibleTargets)-1)];
+			return [_action, _target];
+			//enemy turn ai goes here//enemy turn ai goes here
+		}
+		
+	}
+	,
+	PELUSOG:
+	{
+		name:"PELUSO",
+		hp:30,
+		hpMax:30,
+		mp:0,
+		mpMax:0,
+		strength:5,
+		sprites:{ idle: PELUSO, attack: PELUSO, defend: PELUSO, down: PELUSO},
+		actions:[global.actionLibrary.attack],
+		xpValue:15,
+		AIscript:function()
+		{
+			var _action = actions[0];
+			var _possibleTargets = array_filter(oBattle.partyUnits,function(_unit, _index)
+			{
+				return (_unit.hp >0);
+			});
+			var _target = _possibleTargets[irandom(array_length(_possibleTargets)-1)];
+			return [_action, _target];
+			//enemy turn ai goes here//enemy turn ai goes here
+		}
+		
+	}
+}
